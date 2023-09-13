@@ -1,11 +1,14 @@
-import { Button } from 'antd';
+import { Container } from './components/Container';
 
 function App() {
   return (
-    <>
-      <Button type="primary">Button</Button>
-      <div>tst font</div>
-    </>
+    <main className="grid min-h-screen md:place-items-center">
+      <Container>
+        <div>tst</div>
+        <div>content</div>
+        <div>footer</div>
+      </Container>
+    </main>
   );
 }
 
