@@ -30,6 +30,10 @@ export default {
           'sans-serif',
         ],
       },
+      backgroundImage: {
+        'panel-mobile': 'url("/assets/images/bg-sidebar-mobile.svg")',
+        'panel-desktop': 'url("/assets/images/bg-sidebar-desktop.svg")',
+      },
     },
   },
   plugins: [],
