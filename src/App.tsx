@@ -1,13 +1,13 @@
-import { Container } from './components/Container';
-import StepsPanel from './features/steps/StepsPanel';
+import { Container } from '@/components/Container';
+import StepsPanel from '@/features/steps/StepsPanel';
+import { FormDialog } from '@/features/form/FormDialog';
 
 function App() {
   return (
     <main className="grid min-h-screen md:items-start md:justify-center">
       <Container>
         <StepsPanel />
-        <div className="w-[636px]">content</div>
-        <div>footer</div>
+        <FormDialog />
       </Container>
     </main>
   );
