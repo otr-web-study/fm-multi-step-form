@@ -12,7 +12,7 @@ export const usePersonalInfo = () => {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm<UserData>({ mode: 'onBlur', defaultValues: userData });
+  } = useForm<UserData>({ mode: 'all', defaultValues: userData });
 
   const onSubmit = (fields: UserData) => dispatch(setUserData(fields));
 
