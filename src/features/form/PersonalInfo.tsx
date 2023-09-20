@@ -6,10 +6,10 @@ export const PersonalInfo = () => {
   const title = 'Personal info';
   const subtitle = 'Please provide your name, email address, and phone number.';
 
-  const { errors, register, handleSubmit } = usePersonalInfo();
+  const { errors, isValid, register, handleSubmit } = usePersonalInfo();
 
   return (
-    <FormContainer title={title} subtitle={subtitle} onSubmit={handleSubmit}>
+    <FormContainer title={title} subtitle={subtitle} formValid={isValid} onSubmit={handleSubmit}>
       <div className="flex flex-col gap-[15px] md:gap-[26px]">
         <AppInput
           {...register('name', { required: 'This field is required.' })}
@@ -33,7 +33,7 @@ export const PersonalInfo = () => {
             required: 'This field is required.',
             pattern: {
               value: /^\+[1-9]{1}[0-9]{0,2} [2-9]{1}[0-9]{2} [2-9]{1}[0-9]{2} [0-9]{3,4}$/,
-              message: 'Please enter valid phone number.',
+              message: 'Please enter valid phone.',
             },
           })}
           label="Phone Number"

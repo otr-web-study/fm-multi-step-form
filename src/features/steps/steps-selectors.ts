@@ -8,3 +8,7 @@ export const selectHasPrevStep = (state: RootState) =>
 export const selectHasNextStep = (state: RootState) =>
   state.steps.steps.findIndex((step) => step.id === state.steps.current) <
   state.steps.steps.length - 1;
+export const selectNextStep = (state: RootState) =>
+  state.steps.steps[state.steps.steps.findIndex((step) => step.id === state.steps.current) + 1];
+export const selectPrevStep = (state: RootState) =>
+  state.steps.steps[state.steps.steps.findIndex((step) => step.id === state.steps.current) - 1];

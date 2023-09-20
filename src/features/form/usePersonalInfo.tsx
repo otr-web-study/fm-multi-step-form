@@ -10,11 +10,13 @@ export const usePersonalInfo = () => {
 
   const {
     register,
-    formState: { errors },
+    formState: { errors, isValid },
     handleSubmit,
   } = useForm<UserData>({ mode: 'all', defaultValues: userData });
 
-  const onSubmit = (fields: UserData) => dispatch(setUserData(fields));
+  const onSubmit = (fields: UserData) => {
+    dispatch(setUserData(fields));
+  };
 
-  return { errors, handleSubmit: handleSubmit(onSubmit), register };
+  return { errors, isValid, handleSubmit: handleSubmit(onSubmit), register };
 };

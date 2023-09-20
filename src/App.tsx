@@ -4,7 +4,7 @@ import { FormDialog } from '@/features/form/FormDialog';
 
 function App() {
   return (
-    <main className="grid min-h-screen md:items-start md:justify-center">
+    <main className="flex min-h-screen md:items-start md:justify-center">
       <Container>
         <StepsPanel />
         <FormDialog />

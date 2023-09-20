@@ -1,0 +1,35 @@
+[
+  {
+    "name": "arcade",
+    "title": "Arcade",
+    "price": {
+      "monthly": 9,
+      "yearly": 90
+    },
+    "bonus": {
+      "yearly": "2 month free"
+    }
+  },
+  {
+    "name": "advanced",
+    "title": "Advanced",
+    "price": {
+      "monthly": 12,
+      "yearly": 120
+    },
+    "bonus": {
+      "yearly": "2 month free"
+    }
+  },
+  {
+    "name": "pro",
+    "title": "Pro",
+    "price": {
+      "monthly": 15,
+      "yearly": 150
+    },
+    "bonus": {
+      "yearly": "2 month free"
+    }
+  }
+]
