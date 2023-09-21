@@ -4,6 +4,7 @@ import { selectCurrentStep } from '@/features/steps/steps-selectors';
 import { ConfirmedPanel } from './ConfirmedPanel';
 import { PersonalInfo } from './PersonalInfo';
 import { SelectPlan } from './SelectPlan';
+import { PickAddOns } from './PickAddOns';
 
 export const FormDialog = () => {
   const confirmed = useAppSelector(selectConfirmed);
@@ -15,6 +16,7 @@ export const FormDialog = () => {
     <>
       {currentStep === 'info' && <PersonalInfo />}
       {currentStep === 'select-plan' && <SelectPlan />}
+      {currentStep === 'select-addons' && <PickAddOns />}
     </>
   );
 

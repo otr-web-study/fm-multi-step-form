@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '@/store/appHooks';
 import { selectPlan, selectPlanType } from './form-selectors';
 import { setPlan, setPlanType } from './form-slice';
 import dataPlans from '@/data/plans.json';
-import { PlanType, type Plan } from '@/types/form';
+import { type Plan } from '@/types/form';
 
 export const useSelectPlan = () => {
   const dispatch = useAppDispatch();
@@ -12,11 +12,17 @@ export const useSelectPlan = () => {
 
   const handleSelectPlan = (plan: Plan) => dispatch(setPlan(plan));
 
-  const handleSelectPlanType = (planType: PlanType) => dispatch(setPlanType(planType));
+  const togglePlanType = () => dispatch(setPlanType(planType === 'monthly' ? 'yearly' : 'monthly'));
 
   useEffect(() => {
     dispatch(setPlan(dataPlans[0]));
-  });
+  }, [dispatch]);
 
-  return [dataPlans, plan, planType, handleSelectPlan, handleSelectPlanType];
+  return {
+    planList: dataPlans,
+    currentPlan: plan,
+    planType,
+    handleSelectPlan,
+    togglePlanType,
+  };
 };

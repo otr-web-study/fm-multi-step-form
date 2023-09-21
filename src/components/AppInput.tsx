@@ -12,7 +12,7 @@ interface AppInputProps extends Omit<UseFormRegisterReturn<string>, 'ref'> {
 export const AppInput: FC<AppInputProps> = forwardRef<HTMLInputElement, AppInputProps>(
   ({ label, errorMessage, validationState = 'valid', ...props }, ref) => {
     const inputClassName = clsx(
-      'h-[38px] text-[15px] tracking-[0.1px] col-span-2 font-medium rounded-[4px] px-4 -tracking-[0.3px] outline outline-1 outline-cool-gray transition-all duration-500 placeholder:text-cool-gray focus:outline-purplish-blue md:h-[46px] md:text-base',
+      'h-[38px] text-[15px] tracking-[0.1px] col-span-2 font-medium rounded px-4 -tracking-[0.3px] outline outline-1 outline-cool-gray transition-all duration-500 placeholder:text-cool-gray focus:outline-purplish-blue md:h-[46px] md:text-base',
       { 'outline-strawberry-red': validationState === 'invalid' },
     );
     const errorClassName = clsx('text-strawberry-red transition-opacity duration-500', {

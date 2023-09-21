@@ -1,10 +1,11 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { UserData, Plan, PlanType } from '@/types/form';
+import type { UserData, Plan, PlanType, AddOn } from '@/types/form';
 
 interface FormSlice {
   userData: UserData;
   plan: Plan | undefined;
   planType: PlanType;
+  addOns: AddOn[];
 }
 
 const initialState: FormSlice = {
@@ -15,6 +16,7 @@ const initialState: FormSlice = {
   },
   plan: undefined,
   planType: 'monthly',
+  addOns: [],
 };
 
 const formSlice = createSlice({
@@ -30,8 +32,14 @@ const formSlice = createSlice({
     setPlan: (state, action: PayloadAction<Plan>) => {
       state.plan = action.payload;
     },
+    addAddOn: (state, action: PayloadAction<AddOn>) => {
+      state.addOns = [...new Set([...state.addOns, action.payload])];
+    },
+    removeAddOn: (state, action: PayloadAction<AddOn['name']>) => {
+      state.addOns = state.addOns.filter((addOn) => addOn.name !== action.payload);
+    },
   },
 });
 
 export const formReducer = formSlice.reducer;
-export const { setUserData, setPlan, setPlanType } = formSlice.actions;
+export const { setUserData, setPlan, setPlanType, addAddOn, removeAddOn } = formSlice.actions;

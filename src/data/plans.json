@@ -2,34 +2,37 @@
   {
     "name": "arcade",
     "title": "Arcade",
+    "icon": "/assets/images/icon-arcade.svg",
     "price": {
       "monthly": 9,
       "yearly": 90
     },
     "bonus": {
-      "yearly": "2 month free"
+      "yearly": "2 months free"
     }
   },
   {
     "name": "advanced",
     "title": "Advanced",
+    "icon": "/assets/images/icon-advanced.svg",
     "price": {
       "monthly": 12,
       "yearly": 120
     },
     "bonus": {
-      "yearly": "2 month free"
+      "yearly": "2 months free"
     }
   },
   {
     "name": "pro",
     "title": "Pro",
+    "icon": "/assets/images/icon-pro.svg",
     "price": {
       "monthly": 15,
       "yearly": 150
     },
     "bonus": {
-      "yearly": "2 month free"
+      "yearly": "2 months free"
     }
   }
 ]

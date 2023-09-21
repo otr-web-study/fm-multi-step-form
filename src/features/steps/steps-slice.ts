@@ -16,7 +16,7 @@ const steps: Step[] = [
 
 const initialState: StepsSlice = {
   steps: steps,
-  current: steps[0].id,
+  current: steps[1].id,
   confirmed: false,
 };
 
