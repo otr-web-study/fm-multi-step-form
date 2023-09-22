@@ -33,6 +33,7 @@ export default {
       backgroundImage: {
         'panel-mobile': 'url("/assets/images/bg-sidebar-mobile.svg")',
         'panel-desktop': 'url("/assets/images/bg-sidebar-desktop.svg")',
+        'icon-checkmark': 'url("/assets/images/icon-checkmark.svg")',
       },
       boxShadow: {
         'base-sh': '0px 7px 15px 0px rgba(0, 0, 0, 0.10)',

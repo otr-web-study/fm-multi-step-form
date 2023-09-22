@@ -1,4 +1,7 @@
-import { PlanType, Price } from '@/types/form';
+import { PlanType } from '@/types/form';
 
-export const formatPrice = (price: Price, planType: PlanType) =>
-  `$${price[planType]}/${planType === 'monthly' ? 'mo' : 'yr'}`;
+export const formatPrice = (
+  price: number | undefined,
+  planType: PlanType,
+  extra: boolean = false,
+) => (price ? `${extra ? '+' : ''}$${price}/${planType === 'monthly' ? 'mo' : 'yr'}` : '');

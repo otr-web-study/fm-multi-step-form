@@ -20,7 +20,7 @@ export const PlanCard: FC<PlanCardProps> = ({
 }) => {
   const className = clsx(
     'mt-[2px] flex cursor-pointer items-start gap-4 rounded-lg border border-cool-gray px-[14px] py-4 transition-colors duration-300 hover:bg-pastel-blue/10 md:flex-col md:min-w-[136px]',
-    { 'border-pastel-blue bg-pastel-blue/10': isActive, 'border-cool-gray': !isActive },
+    { 'border-purplish-blue bg-pastel-blue/10': isActive, 'border-light-gray': !isActive },
   );
 
   return (
@@ -36,7 +36,7 @@ export const PlanCard: FC<PlanCardProps> = ({
             exit={{ opacity: 0 }}
             className="text-sm font-medium text-cool-gray"
           >
-            {formatPrice(price, planType)}
+            {formatPrice(price[planType], planType)}
           </motion.p>
         </AnimatePresence>
         <AnimatePresence>

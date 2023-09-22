@@ -23,3 +23,7 @@ export interface AddOn {
   description: string;
   price: Price;
 }
+
+export interface AddOnWithControls extends AddOn {
+  checked: boolean;
+}
