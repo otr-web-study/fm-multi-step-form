@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion';
 import { FormContainer } from './FormContainer';
 import { useSummary } from './useSummary';
 import { formatPrice } from '@/utils/formatPrice';
+import { itemVariants } from '@/utils/animateVatianst';
 
 export const Summary = () => {
   const title = 'Finishing up';
@@ -16,7 +18,13 @@ export const Summary = () => {
 
   return (
     <FormContainer title={title} subtitle={subtitle} onSubmit={handleConfirm} formValid={true}>
-      <div className="flex flex-col gap-3 rounded-md bg-pastel-blue/10 px-4 py-[18px] text-sm md:gap-4 md:px-[22px] md:text-base">
+      <motion.div
+        variants={itemVariants}
+        custom={0}
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col gap-3 rounded-md bg-pastel-blue/10 px-4 py-[18px] text-sm md:gap-4 md:px-[22px] md:text-base"
+      >
         <div className="flex items-center justify-between border-b border-b-light-gray pb-3 md:pb-[18px]">
           <div>
             <h3 className="font-medium">{`${plan?.title} (${
@@ -32,11 +40,17 @@ export const Summary = () => {
           <p className="font-medium">{formatPrice(plan?.price[planType], planType, true)}</p>
         </div>
         {contentAddOns}
-      </div>
-      <div className="mt-5 flex items-center justify-between px-4 md:mt-[26px] md:px-[22px]">
+      </motion.div>
+      <motion.div
+        variants={itemVariants}
+        custom={1}
+        initial="hidden"
+        animate="visible"
+        className="mt-5 flex items-center justify-between px-4 md:mt-[26px] md:px-[22px]"
+      >
         <p className="text-sm">{`Total (per ${planType === 'monthly' ? 'month' : 'year'})`}</p>
         <p className="text-purplish-blue md:text-[21px]">{formatPrice(totalSum, planType, true)}</p>
-      </div>
+      </motion.div>
     </FormContainer>
   );
 };

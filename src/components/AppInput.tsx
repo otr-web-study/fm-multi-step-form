@@ -15,7 +15,7 @@ export const AppInput: FC<AppInputProps> = forwardRef<HTMLInputElement, AppInput
       'h-[38px] text-[15px] tracking-[0.1px] col-span-2 font-medium rounded px-4 -tracking-[0.3px] outline outline-1 outline-cool-gray transition-all duration-500 placeholder:text-cool-gray focus:outline-purplish-blue md:h-[46px] md:text-base',
       { 'outline-strawberry-red': validationState === 'invalid' },
     );
-    const errorClassName = clsx('text-strawberry-red transition-opacity duration-500', {
+    const errorClassName = clsx('text-strawberry-red transition-opacity duration-500 text-end', {
       'opacity-100': validationState === 'invalid',
       'opacity-0': validationState === 'valid',
     });

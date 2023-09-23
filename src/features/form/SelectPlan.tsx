@@ -1,16 +1,21 @@
 import { FormContainer } from './FormContainer';
 import { useSelectPlan } from './useSelectPlan';
-import { PlanCard } from './PlanCard';
+import { MPlanCard } from './PlanCard';
 import { AppSwitch } from '@/components/AppSwitch';
+import { itemVariants } from '@/utils/animateVatianst';
 
 export const SelectPlan = () => {
   const title = 'Select your plan';
   const subtitle = 'You have the option of monthly or yearly billing.';
   const { planList, currentPlan, planType, handleSelectPlan, togglePlanType } = useSelectPlan();
 
-  const content = planList.map((plan) => (
+  const content = planList.map((plan, i) => (
     <li key={plan.name}>
-      <PlanCard
+      <MPlanCard
+        custom={i}
+        variants={itemVariants}
+        initial="hidden"
+        animate="visible"
         planType={planType}
         onClick={() => handleSelectPlan(plan)}
         {...plan}

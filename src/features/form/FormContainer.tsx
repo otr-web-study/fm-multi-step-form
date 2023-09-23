@@ -38,7 +38,7 @@ export const FormContainer: FC<FormContainerProps> = ({
 
   return (
     <form
-      className="flex h-full flex-col justify-between md:ml-[min(104px,8vw)] md:mr-[min(88px,7vw)]"
+      className="flex h-full flex-col justify-between md:ml-[min(104px,7vw)] md:mr-[min(88px,7vw)]"
       onSubmit={handleSubmit}
     >
       <motion.div
