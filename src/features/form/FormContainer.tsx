@@ -32,7 +32,7 @@ export const FormContainer: FC<FormContainerProps> = ({
     'col-start-2 justify-self-end rounded md:rounded-[8px] px-4 py-[10px] text-sm text-white transition-colors duration-500 md:py-[14px] md:px-[26px] md:text-base',
     {
       'bg-marine-blue hover:bg-purplish-blue': hasNextStep,
-      'bg-purplish-blue hover:bg-marine-blue': !hasNextStep,
+      'bg-purplish-blue hover:bg-marine-blue md:px-8': !hasNextStep,
     },
   );
 

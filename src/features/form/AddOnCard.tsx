@@ -30,8 +30,6 @@ export const AddOnCard: FC<AddOnCardProps> = ({
     },
   );
 
-  console.log(title, checked);
-
   return (
     <div className={className} onClick={onClick}>
       <span className={checkBoxClassName} />
