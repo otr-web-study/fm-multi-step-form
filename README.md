@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/multistep-form-kVdgemAOEw)
+- Live Site URL: (https://calm-starship-43db70.netlify.app/)
 
 ### Built with
 
